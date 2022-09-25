@@ -117,38 +117,120 @@ body {
     margin-right: 1rem;
 }
 
-.content .number-of-cards {
-    
+.content .number-of-cards {    
     letter-spacing: .1rem;
 }
 
-.bottom-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 0 auto;    
-    flex-direction: column;
-    border: 1px solid red;
-    
-}
 .form-content {
+    margin: 0 auto;
+    width: 328px;
     display: flex;
     justify-content: center;    
     flex-direction: column;
-    border: 1px solid green;
-    width: 335px;
 }
 
-.form-content label {
-    font-family: 'Space Grotesk', sans-serif;
-    
-    text-transform: uppercase;
+.authentication-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
 }
 
-.form-content input {    
-    color: var(--dark-grayish);
+.authentication-card .expiry-card{
+    margin-top: .5rem; 
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
 }
 
-button {
-    width: 90%;
+.expiry-card input {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.labels label{
+    margin-right: 1rem;
+    margin-bottom: 1rem;    
+}
+
+.authentication-card .cvc-card {
+    margin-top: .5rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cvc-card input{
+    width: 100%;
+    margin-right: 10px;
+}
+
+.warning {
+    display: none;
+    color: var(--red);
+}
+
+label {
+    margin-bottom: .5rem;
+}
+
+input {
+    padding: .2rem;
+    margin-bottom: .5rem;    
+    border: none;
+    border-bottom: 1px solid var(--very-dark-violet);
+    border-radius: 0.2rem;
+}
+
+input:focus {
+    outline: 1px solid var(--gradient-second);
+}
+
+.submitBtn {
+    padding: .5rem;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border: none;
+    border-radius: .2rem;
+}
+
+@media (min-width:880px){
+    .container {
+        width: 100%;
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-height: 100vh;
+    }
+
+    .top-form {
+        height: 100vh;
+        width: 50%;
+    }
+
+    .bottom-form {
+        width: 50%;
+    }
+
+    .desktop-image {
+        position: absolute;
+        background-image: url(./images/bg-main-desktop.png);
+        width: 23.438rem;
+        height: 100vh;
+   } 
+   
+   .back-card {
+        top: 20rem;
+        left: 13rem;
+   }
+
+   .front-card {        
+        top: -1rem;
+        left: 10em;
+   }
+
+    .mobile-image {
+        display:none;
+    }
 }

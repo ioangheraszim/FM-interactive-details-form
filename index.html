@@ -19,7 +19,7 @@
         <div class="desktop-image"></div>        
       </div>
       <div class="back-card">
-        <p class="cvc-info">123</p>
+        <p class="cvc-info">000</p>
       </div>
       <div class="front-card">
         <div class="circles">
@@ -36,25 +36,30 @@
       </div>
     </section>
     <section class="bottom-form">
-
-     <form class="form-content" action="submit">
-      <label for="name">Card Name</label>
-      <input type="text" placeholder="Jane Appleseed">
-      <label for="card-number">Card Number</label>
-      <input type="number" placeholder="1234 4567 8901 1234" maxlength="16">
-      <div class="fuckknows">
-        <label for="expiry">EXP. DATE (MM YY)</label> 
-        <label for="CVC">CVC</label>
-      </div>
-      <div>
-        <input type="text" placeholder="MM">
-        <input type="text" placeholder="YY">
-      </div>
-      <input type="text" placeholder="CVC">
-     </form>
-
-     <button>Confirm</button>
-           
+      <form class="form-content" action="">        
+          <label for="cardholderName" class="block">CARDHOLDER NAME</label>
+          <input type="text" id="cardholderName" placeholder="e.g. Jane Appleseed">
+          <p class="warning">Can't be blank</p> 
+          <label for="cardHolderNumber" class="block">CARD NUMBER</label>
+          <input type="text" id="cardHolderNumber" placeholder="e.g. 1234 4567 9123 0000" maxlength="19">
+          <p class="warning">Incorrect Number</p>
+          <p class="warning">Can't contain letters</p>
+          <p class="warning">Can't be blank</p>
+          <div class="labels">
+            <label for="exp">EXP. DATE (MM/YY)</label>
+            <label for="">CVC</label>
+          </div>
+          <div class="authentication-card">
+            <div class="expiry-card">
+              <input type="text" name="exp" placeholder="MM" maxlength="2">
+              <input type="text" name="exp" placeholder="YY" maxlength="2">
+            </div>           
+            <div class="cvc-card">            
+              <input type="text" name="cvc" placeholder="000" maxlength="3">
+            </div>
+          </div>
+        <input class="submitBtn" type="submit" action="submit" value="Confirm">
+      </form>
     </section>
   </main>
   <script src="./script.js"></script>  
