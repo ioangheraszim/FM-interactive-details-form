@@ -1,0 +1,154 @@
+/* Color Variables */
+:root {
+    /* Primary Colors */
+    --red: #ff5252;
+    --gradient-first: #6448fe;
+    --gradient-second: #600594;
+    /* Neutral Colors */
+    --white: #fff;
+    --light-grayish: #dedddf;
+    --dark-grayish: #8e8593;
+    --very-dark-violet: #21092f;
+}
+
+/* Reset Rules */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.125;
+    background-color: var(--white);
+}
+
+.container {
+    width: 23.438rem;    
+}
+
+
+.background-image {
+    position: absolute;
+}
+
+.mobile-image {
+    background-image: url(./images/bg-main-mobile.png);
+    width: 23.438rem;
+    height: 15rem;    
+}
+
+.back-card {
+
+    background-image: url(./images/bg-card-back.png);
+    height: 10rem;
+    width: 17.938rem;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: relative;
+    top: 1rem;
+    left: 4rem;    
+}
+
+
+.back-card .cvc-info {
+    position: relative;
+    top: 4.3rem;
+    left: 14rem;
+    color: var(--white);
+}
+
+.front-card {
+    background-image: url(./images/bg-card-front.png);
+    height: 10rem;
+    width: 17.938rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: -53px;
+    left: 1rem;        
+    border: 1px solid transparent;
+}
+
+.circles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+
+.circles .full-circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--white);
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.circles .empty-circle {
+    background-color: transparent;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    outline: 1px solid var(--white);
+}
+
+.content {
+    margin-top: 3rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.content .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .6rem;
+    margin-right: 1rem;
+}
+
+.content .number-of-cards {
+    
+    letter-spacing: .1rem;
+}
+
+.bottom-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0 auto;    
+    flex-direction: column;
+    border: 1px solid red;
+    
+}
+.form-content {
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    border: 1px solid green;
+    width: 335px;
+}
+
+.form-content label {
+    font-family: 'Space Grotesk', sans-serif;
+    
+    text-transform: uppercase;
+}
+
+.form-content input {    
+    color: var(--dark-grayish);
+}
+
+button {
+    width: 90%;
+}
