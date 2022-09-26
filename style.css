@@ -30,7 +30,8 @@ body {
 }
 
 .container {
-    width: 23.438rem;    
+    width: 23.438rem;
+    flex-basis: auto;
 }
 
 
@@ -121,64 +122,70 @@ body {
     letter-spacing: .1rem;
 }
 
-.form-content {
-    margin: 0 auto;
-    width: 328px;
+/* Form Styling */
+
+.form-container {
     display: flex;
-    justify-content: center;    
+    justify-content: flex-start;    
+    flex-direction: column;
+    width: 348px;
+}
+
+.form-container .information {
+    display: flex;
     flex-direction: column;
 }
 
-.authentication-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;    
-}
-
-.authentication-card .expiry-card{
-    margin-top: .5rem; 
-    width: 50%;
-    display: flex;
-    flex-direction: row;
+.information label {
     margin-bottom: 1rem;
 }
 
-.expiry-card input {
-    width: 100%;
-    margin-right: 10px;
+.authenticator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-.labels label{
-    margin-right: 1rem;
-    margin-bottom: 1rem;    
+.authenticator label {
+    margin-bottom: 1rem;
 }
 
-.authentication-card .cvc-card {
-    margin-top: .5rem;
-    width: 50%;
+.authenticator-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;    
+}
+
+.authenticator-left input{
+    margin-top: 1rem;
+    width: 50px;
+}
+
+.authenticator-right {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
-.cvc-card input{
-    width: 100%;
-    margin-right: 10px;
+.authenticator-right input {
+    width: 50px;
 }
 
-.warning {
-    display: none;
-    color: var(--red);
+/* For Javascript Styles */
+
+.input-control.success {
+    border: 1px solid var(--gradient-first);
 }
 
-label {
-    margin-bottom: .5rem;
+.input-control.error input{
+    border: 1px solid var(--red);
 }
 
 input {
     padding: .2rem;
     margin-bottom: .5rem;    
     border: none;
-    border-bottom: 1px solid var(--very-dark-violet);
+    border-bottom: 1px solid var(--dark-grayish);
     border-radius: 0.2rem;
 }
 
@@ -200,7 +207,14 @@ input:focus {
     border-radius: .2rem;
 }
 
-@media (min-width:880px){
+.errorWarning {
+    font-size: .6rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+    display: none;
+}
+
+@media (min-width:990px){
     .container {
         width: 100%;
         display: flex;        
