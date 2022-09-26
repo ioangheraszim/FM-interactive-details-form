@@ -194,6 +194,12 @@ input:focus {
     border-radius: .2rem;
 }
 
+.submitBtn:hover {
+    cursor: pointer;
+    background-color: var(--gradient-second);
+    border-radius: .2rem;
+}
+
 @media (min-width:880px){
     .container {
         width: 100%;
