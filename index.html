@@ -19,7 +19,7 @@
         <div class="desktop-image"></div>        
       </div>
       <div class="back-card">
-        <p class="cvc-info">000</p>
+        <p id="cvcinfo" class="cvc-info">000</p>
       </div>
       <div class="front-card">
         <div class="circles">
@@ -27,42 +27,42 @@
           <div class="empty-circle"></div>
         </div>
         <div class="content">
-          <p class="number-of-cards">0000 0000 0000 0000</p>
+          <p id="numberofcards" class="number-of-cards">0000 0000 0000 0000</p>
           <div class="info">
-            <p>Jane Appleseed</p>
-            <p><span>00</span>/<span>00</span></p>
+            <p id="nameofcards">Jane Appleseed</p>
+            <p><span id="monthcards">00</span>/<span id="yearcards">00</span></p>
           </div>
         </div>
       </div>
     </section>
     <section class="bottom-form">
-      <form class="form-container" action="">
+      <form id="form" class="form-container" action="">
         <div class="input-control information">
-          <label for="name">Cardholder Name</label>
-          <input id="name" type="text" name="name" placeholder="Jane Appleseed" required>
+          <label for="cardname">Cardholder Name</label>
+          <input id="cardname" type="text" name="cardname" placeholder="Jane Appleseed" oninput="nameInput()">
           <p class="errorWarning">Can't be empty</p>
         </div>
         <div class="input-control information">
           <label for="cardNumber">Card Number</label>
-          <input id="cardnumber" type="text" name="cardNumber" placeholder="0000 1234 5678 9011" maxlength="19" required>
+          <input id="cardnumber" type="text" name="cardNumber" placeholder="0000 1234 5678 9011" maxlength="19" oninput="cardInput()">
           <p class="errorWarning">Can't be empty</p>
         </div>
         <div class="authenticator">
           <div class="authenticator-left">
             <div class="input-control">
               <label for="expDateMonth">EXP. DATE </label>
-              <input id="expDateMonth" type="text" name="expDateMonth" placeholder="00" maxlength="2" required>
+              <input id="expDateMonth" type="text" name="expDateMonth" placeholder="00" maxlength="2" oninput="dateInput()">
               <p class="errorWarning">Can't be empty</p>
             </div>
             <div class="input-control">
               <label for="expDateYear">(MM/YY)</label>
-              <input id="expDateYear" type="text" name="expDateYear" placeholder="00" maxlength="2" required>
+              <input id="expDateYear" type="text" name="expDateYear" placeholder="00" maxlength="2" oninput="yearInput()">
               <p class="errorWarning">Can't be empty</p>   
             </div>                        
           </div>
           <div class="input-control authenticator-right">
             <label for="cvc">CVC</label>
-            <input id="cvc" type="text" name="cvc" placeholder="000" maxlength="3" required>
+            <input id="cvc" type="text" name="cvc" placeholder="000" maxlength="3" oninput="cvcInput()">
             <p class="errorWarning">Can't be empty</p>
           </div>
         </div>
