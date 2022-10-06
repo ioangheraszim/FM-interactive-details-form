@@ -186,7 +186,7 @@ body {
 }
 
 input {
-    padding: .5rem;
+    padding: .25rem;
     margin-bottom: .5rem;    
     border: none;
     border-bottom: 1px solid var(--dark-grayish);
@@ -312,6 +312,10 @@ input:hover {
     .content , .content .number-of-cards { 
         font-size: 1.5rem;   
         margin-top: 2.7rem;
+    }
+
+    input {
+        padding: .5rem;
     }
 
     .mobile-image {
