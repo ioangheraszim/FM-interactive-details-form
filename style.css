@@ -74,7 +74,7 @@ body {
     height: 10rem;
     width: 17.938rem;
     position: relative;
-    top: -53px;
+    top: -3.313rem;
     left: 1rem;        
     border: 1px solid transparent;
 }
@@ -154,7 +154,7 @@ body {
 
 .authenticator-left input{
     margin-top: 1rem;
-    width: 50px;
+    width: 3.125rem;
 }
 
 .input-control .authenticator-right {
@@ -164,7 +164,7 @@ body {
 }
 
 #cvc {
-    margin: 16px 0 8px;
+    margin: 1rem 0 .5rem;
 }
 
 /* For Javascript Styles */
@@ -178,7 +178,7 @@ body {
     color: var(--red);
     margin-bottom: 1rem;
     visibility: hidden;
-    margin-right: 5px;
+    margin-right: 0.313rem;
 }
 
 .input-control.error .errorWarning {
@@ -280,8 +280,8 @@ input:hover {
    } 
    
    .back-card {
-        width: 450px;
-        height: 250px;
+        width: 28.125rem;
+        height: 15.625rem;
         top: 32rem;
         left: 20rem;
    }
@@ -293,8 +293,8 @@ input:hover {
     }
 
    .front-card {
-        width: 450px;
-        height: 250px;        
+        width: 28.125rem;
+        height: 15.625rem;      
         top: -1rem;
         left: 10em;
    }
