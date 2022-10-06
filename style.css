@@ -19,43 +19,48 @@
     padding: 0;
 }
 
-body {
+/* display flex */
+
+body, .content, .circles, .form-container, .authenticator, .bottom-form, #success {
     display: flex;
+}
+
+body {
     flex-direction: column;
     justify-content: center;
     align-items: center;    
     font-family: 'Space Grotesk', sans-serif;
-    font-size: .8rem;
+    font-size: 1.125rem;
     background-color: var(--white);
 }
 
 .container {
+    min-height: 100vh;
     width: 23.438rem;
-    flex-basis: auto;
 }
 
 .background-image {
     position: absolute;
 }
 
+/* Top Mobile Image */
 .mobile-image {
-    background-image: url(./images/bg-main-mobile.png);
+    background: url(./images/bg-main-mobile.png) no-repeat center center/cover;
     width: 23.438rem;
     height: 15rem;    
 }
 
+/* Back card holding CVC */
 .back-card {
-
     background: url(./images/bg-card-back.png) no-repeat center center/cover;
     height: 10rem;
     width: 17.938rem;
-
     position: relative;
     top: 1rem;
-    left: 4rem;    
+    left: 4rem;
 }
 
-
+/* CVC information */
 .back-card .cvc-info {
     position: relative;
     top: 4.3rem;
@@ -63,6 +68,7 @@ body {
     color: var(--white);
 }
 
+/* Front card holding card information */
 .front-card {
     background: url(./images/bg-card-front.png) no-repeat center center/cover;
     height: 10rem;
@@ -73,8 +79,7 @@ body {
     border: 1px solid transparent;
 }
 
-.circles {
-    display: flex;
+.circles {    
     justify-content: flex-start;
     align-items: center;
     margin-left: 1rem;
@@ -100,7 +105,6 @@ body {
 .content {
     margin-top: 3rem;
     margin-left: 1rem;
-    display: flex;
     flex-direction: column;
     color: var(--white);
 }
@@ -119,10 +123,9 @@ body {
 /* Form Styling */
 
 .form-container {
-    display: flex;
     justify-content: flex-start;    
     flex-direction: column;
-    width: 348px;
+    width: 23.438rem;
 }
 
 .form-container .input-control {
@@ -135,19 +138,18 @@ body {
 }
 
 .authenticator {
-    display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 
 .authenticator label {
+    margin-right: .5rem;
     margin-bottom: 1rem;
 }
 
 .authenticator-left {
     display: flex;
-    justify-content: flex-start;
-    width: 50%;    
+    justify-content: flex-start;       
 }
 
 .authenticator-left input{
@@ -184,7 +186,7 @@ body {
 }
 
 input {
-    padding: .2rem;
+    padding: .5rem;
     margin-bottom: .5rem;    
     border: none;
     border-bottom: 1px solid var(--dark-grayish);
@@ -195,8 +197,12 @@ input:focus {
     outline: 1px solid var(--gradient-second);
 }
 
+input:hover {
+    outline: 1px solid var(--gradient-first);
+}
+
 .submitBtn {
-    padding: .5rem;
+    padding: 1rem;
     background-color: var(--very-dark-violet);
     color: var(--white);
     border: none;
@@ -210,13 +216,14 @@ input:focus {
 }
 
 .bottom-form {
-    display: block;
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 #success {  
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     display: none;
 }
@@ -226,7 +233,7 @@ input:focus {
 }
 
 #success h2 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
     text-transform: capitalize;
     letter-spacing: .3rem;
@@ -243,13 +250,12 @@ input:focus {
     width: 100%;
 }
 
-@media (min-width:990px){
+@media (min-width:81.25rem){
     .container {
         width: 100%;
         display: flex;        
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
         min-height: 100vh;
     }
 
@@ -266,22 +272,47 @@ input:focus {
         width: 50%;
     }
 
-    .desktop-image {
+    .desktop-image {        
         position: absolute;
-        background-image: url(./images/bg-main-desktop.png);
-        width: 23.438rem;
+        background: url(./images/bg-main-desktop.png) no-repeat center center/cover;
+        width: 32rem;
         height: 100vh;
    } 
    
    .back-card {
-        top: 20rem;
-        left: 13rem;
+        width: 450px;
+        height: 250px;
+        top: 32rem;
+        left: 20rem;
    }
 
-   .front-card {        
+   .back-card .cvc-info {
+        position: relative;
+        top: 45%;
+        left: 80%;
+    }
+
+   .front-card {
+        width: 450px;
+        height: 250px;        
         top: -1rem;
         left: 10em;
    }
+
+   .circles .full-circle {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .circles .empty-circle {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .content , .content .number-of-cards { 
+        font-size: 1.5rem;   
+        margin-top: 2.7rem;
+    }
 
     .mobile-image {
         display:none;

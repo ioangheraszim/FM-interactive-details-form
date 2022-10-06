@@ -84,7 +84,9 @@ form.addEventListener('submit', function(e) {
         showErrorInformation(expDateMonth, 'Cannot be empty!')
     } else if(expDateMonth.value.length < 2 ){
         showErrorInformation(expDateMonth, 'Needs 2 numbers ples')
-    } else {
+    } else if (!numbersOnly(expDateMonth.value)) {
+        showErrorInformation(expDateMonth, 'Numbers please!')
+    }else {
         showSuccess(expDateMonth);
     }
 
@@ -93,7 +95,9 @@ form.addEventListener('submit', function(e) {
         showErrorInformation(expDateYear, 'Cannot be empty!')
     } else if(expDateYear.value.length < 2){
         showErrorInformation(expDateYear, 'Needs 2 numbers ples')
-    } else {
+    } else if (!numbersOnly(expDateYear.value)) {
+        showErrorInformation(expDateYear, 'Numbers please!')
+    }else {
         showSuccess(expDateYear);
     }
 
@@ -102,7 +106,9 @@ form.addEventListener('submit', function(e) {
         showErrorInformation(cvc, 'Cannot be empty!')
     } else if(cvc.value.length < 3 ){
         showErrorInformation(cvc, 'Needs 3 numbers ples')
-    } else {
+    } else if (!numbersOnly(cvc.value)) {
+        showErrorInformation(cvc, 'Numbers please!')
+    }else {
         showSuccess(cvc);
     }
 
@@ -143,7 +149,7 @@ function nameInput () {
 
 // Card input visual 
 function cardInput() {
-    const cardString = '0000 0000 0000 0000';
+    const cardString = '0000 1234 5678 9011';
     if (cardNumber.value === ''){
         numberCards.innerText = cardString;
     } else {

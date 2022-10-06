@@ -27,7 +27,7 @@
           <div class="empty-circle"></div>
         </div>
         <div class="content">
-          <p id="numberofcards" class="number-of-cards">0000 0000 0000 0000</p>
+          <p id="numberofcards" class="number-of-cards">0000 1234 5678 9011</p>
           <div class="info">
             <p id="nameofcards">Jane Appleseed</p>
             <p><span id="monthcards">00</span>/<span id="yearcards">00</span></p>
@@ -39,12 +39,12 @@
       <form id="form" class="form-container" action="">
         <div class="input-control information">
           <label for="cardname">Cardholder Name</label>
-          <input id="cardname" type="text" name="cardname" placeholder="Jane Appleseed" oninput="nameInput()">
+          <input id="cardname" type="text" name="cardname" placeholder="Jane Appleseed" maxlength="18" oninput="nameInput()">
           <p class="errorWarning">Can't be empty</p>
         </div>
         <div class="input-control information">
           <label for="cardNumber">Card Number</label>
-          <input id="cardnumber" type="text" name="cardNumber" placeholder="0000 1234 5678 9011" maxlength="19" oninput="cardInput()">
+          <input id="cardnumber" type="text" name="cardNumber" placeholder="0000 1234 5678 9011" maxlength="16" oninput="cardInput()">
           <p class="errorWarning">Can't be empty</p>
         </div>
         <div class="authenticator">
